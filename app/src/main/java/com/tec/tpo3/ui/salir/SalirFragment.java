@@ -46,11 +46,12 @@ public class SalirFragment extends Fragment {
                 .setTitle("Confirmar salida")
                 .setMessage("¿Seguro que deseas salir de la aplicación?")
                 .setPositiveButton("Sí", (dialog, which) -> {
-                    requireActivity().finishAffinity(); // Cierra la app
+                    requireActivity().finishAffinity();
                     System.exit(0);
                 })
                 .setNegativeButton("No", (dialog, which) -> {
-                    dialog.dismiss(); // Cierra el diálogo y sigue en la app
+                    dialog.dismiss();
+                    
                 })
                 .show();
     }
